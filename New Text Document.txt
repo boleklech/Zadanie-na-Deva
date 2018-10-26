@@ -1,0 +1,3 @@
+#color obramowki== e5e5e5;
+pomaranczowy--ed796d
+https://bennettfeely.com/clippy/
