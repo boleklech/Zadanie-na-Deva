@@ -1,0 +1,53 @@
+.about{
+	
+	.about-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 0 25px;
+
+		.about-row{
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+			.cover{
+				span{
+					background: url(../img/clean_code.png);
+					background-repeat: no-repeat;
+					width: 80px;
+					height: 80px;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+			
+				h3{
+					font-size: 2rem;
+					text-align: center;
+				}
+
+				.cover-separate{
+					margin-top: 10px;
+					margin-bottom: 10px;
+					span{
+						background: url(../img/span.png);
+						background-repeat: no-repeat;
+						width: 80px;
+						height: 5px;
+
+
+						display: block;
+						margin: 0 auto;
+					}
+				}
+
+				p{
+					padding-bottom: 40px;
+					color: #a6a6a6;
+				}
+		}
+
+	}
+
+}
