@@ -29,7 +29,8 @@ $(document).ready(function  (){
 				}
 
 			//do nawigacji
-				$("nav").toggleClass("active");
+				$("nav").toggleClass("nav-active");
+				$(".cover-nav").toggleClass("cover-nav-active")
 
 		});
 
@@ -37,7 +38,7 @@ $(document).ready(function  (){
 
 				if (window.innerWidth > 768) {
 				//do nawigacji
-					$(".nav").removeClass("active"),
+					$("nav").removeClass("nav-active"),
 				//do buttona
 					$(".button").removeClass("button-active"),
 					$(".button").removeClass("button-after");
