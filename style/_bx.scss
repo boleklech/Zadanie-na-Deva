@@ -67,7 +67,7 @@ ul.bxslider {
   padding-top: 20px;
 
   @include desktop{
-    top: 550px;
+    top: 560px;
   }
 }
 .bx-wrapper .bx-pager.bx-default-pager a {
@@ -106,7 +106,7 @@ ul.bxslider {
   background-position: 10px 5px;
   background-color: rgba(154, 137, 137, 0.83);
   text-align: center;
-  z-index: 9;
+  border-radius: 2px;
 }
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {

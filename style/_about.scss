@@ -5,7 +5,7 @@
 		margin:0 auto;
 	}
 	
-	.about-container{
+	.about__container{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -14,9 +14,10 @@
 
 		@include desktop{
 			flex-direction: row;
+			padding-bottom: 50px;
 		}
 
-		.about-row{
+		.about__container--row{
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -26,85 +27,75 @@
 				padding: 0 20px;
 			}
 
-			
-
-			.border-img{
+			.about__border--img{
 				position: relative;
 				margin: 0 auto;
-				width: 80px;
-				height: 80px;
-				border: 1px solid rgb(232, 227, 227);
-				border-radius: 2px;
 				margin-bottom: 30px;
 
-				
+				&::before{
+					content:"";
+					position: relative;
+					display: block;
+					width: 80px;
+					height: 80px;
+					border: 1px solid rgb(232, 227, 227);
+					border-radius: 2px;
+					transition: 1s  ease;
+
+				@include desktop{
+					width: 60px;
+					height: 60px;
+					}
+					
+				}
 
 				@include desktop{
 					width: 60px;
 					height: 60px;
 
-					&:hover{
+					&:hover::before{
 						border: 1px solid #e74c3c;
 						transform: rotateZ(-45deg);
-					}
-					&:hover .img-infin{
-						transform: rotateZ(45deg) translate(-15px,5px);
-
+						transition: 1s  ease;
 					}
 
-					&:hover .img-heart{
-						transform: rotateZ(45deg) translate(-15px,1px);
-
-					}
-					&:hover .img-light{
-						transform: rotateZ(45deg) translate(-16px,-3px);
-
-					}
-					&:hover .img-dialog{
-						transform: rotateZ(45deg) translate(-18px,-2px);
-
-					}
-
-					&:hover + .hover-title{
+					&:hover + .about__hover--title3{
 						color:  #e74c3c;
 					}
-
 					
 				}
 
-				
-
-				span{
+				.about__img{
 					position: absolute;
 					display: block;
 					left: 50%;
 					transform: translate(-50%,-50%);
 					top: 50%;
-					z-index: 9;
+					z-index: 8;
 				}
-
-				.img-infin{
+			
+				.img__infin{
 					background: url(../img/infin.png);
 					background-repeat: no-repeat;
 					width: 28px;
 					height: 15px;
 				}
 
-				.img-heart{
+				.img__heart{
 					background: url(../img/heart.png);
 					background-repeat: no-repeat;
 					width: 22px;
 					height: 20px;
 				}
 
-				.img-light{
+				.img__light{
 					background: url(../img/light.png);
 					background-repeat: no-repeat;
 					width: 18px;
 					height: 26px;
 				}
 
-				.img-dialog{
+				.img__dialog{
 					background: url(../img/dialog.png);
 					background-repeat: no-repeat;
 					width: 22px;
@@ -112,38 +103,34 @@
 				}
 			}
 			
-				.hover-title{
+				.about__hover--title3{
 					font-size: 1.2rem;
 					text-align: center;
 					text-transform: uppercase;
 					color: rgba(0, 0, 0, 0.54);
 				}
 
-				.cover-separate{
+				.about__cover--separate{
 					margin-top: 10px;
 					margin-bottom: 10px;
-					span{
+					.about__cover--separate-img{
 						background: url(../img/span.png);
 						background-repeat: no-repeat;
 						width: 80px;
 						height: 5px;
-
-
 						display: block;
 						margin: 0 auto;
 					}
 				}
 
-				p{
+				.about__container--text{
 					padding-bottom: 40px;
 					color: #a6a6a6;
 
 					@include desktop{
 						font-size: .7rem;
 					}
-				}
+			}
 		}
-
 	}
-
 }
